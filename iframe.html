@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El sistema solar</title>
+    <link rel="icon" href="C:\Users\mrsde\OneDrive\Imágenes"type="image/jfif">
+    <style>
+        
+        iframe {
+            display: block;
+            margin: 20px auto;
+            width: 75%;
+            height: 300x;
+            border: 2px solid black;
+        }
+
+    
+        table {
+            width: 75%;
+            margin: 20px auto;
+            background: black;
+            color: white;
+            border-collapse: collapse; 
+        }
+
+        th {
+            text-align: center;
+            padding: 10px;
+        }
+
+        img {
+            height: 100x;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function showImage(imageSrc) {
+            var iframe = document.getElementById('imageFrame');
+            iframe.src = imageSrc;
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1 style="text-align: center;">El Sistema Solar</h1>
+
+        <table>
+            <thead>
+                <tr>
+              
+                    <th><img src="C:\Users\mrsde\OneDrive\Imágenes/sistema4.jpg"
+                    style="height: 200px; border: 2px solid black;" onclick="showImage('C:\Users\mrsde\OneDrive\Imágenes/sistema4.jpg')"></th>
+
+                
+                    <th><img src="C:\Users\mrsde\OneDrive\Imágenes/sistema5.jpg"
+                    style="height: 150px; border: 2px solid black;" onclick="showImage('C:\Users\mrsde\OneDrive\Imágenes/sistema5.jpg')"></th>
+
+                    
+                    <th><img src="C:\Users\mrsde\OneDrive\Imágenes/sistema6.jpg"
+                    style="height: 150px; border: 2px solid black;" onclick="showImage('C:\Users\mrsde\OneDrive\Imágenes/sistema6.jpg')"></th>
+
+                  
+                    <th><img src="C:\Users\mrsde\OneDrive\Imágenes/sistema7.jpg"
+                    style="height: 150px; border: 2px solid black;" onclick="showImage('C:\Users\mrsde\OneDrive\Imágenes/sistema7.jpg')"></th>
+                </tr>
+            </thead>
+        </table>
+
+        <iframe id="imageFrame" src="" frameborder="0"></iframe>
+
+    </header>
+
+</body>
+</html>
+
+
+
