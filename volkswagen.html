@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volkswagen Potosina</title>
+    <style>
+        body {
+            background-color: #92cbdf;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .formulario {
+            width: 80%;
+            margin: auto;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #92cbdf;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            border: 1px solid black;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: inline-block;
+            width: 110px;
+            margin: 5px;
+        }
+        input, select {
+            margin: 5px;
+        }
+        .botones {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Volkswagen Potosina</h1>
+    <h2>Compras online</h2>
+    <div class="formulario">
+        <fieldset>
+            <legend>Información general del cliente</legend>
+            <label>Nombre:</label>
+            <input type="text" placeholder="Nombre" required>
+            <label>Apellido paterno:</label>
+            <input type="text" placeholder="Apellido paterno">
+            <label>Apellido materno:</label>
+            <input type="text" placeholder="Apellido materno"><br>
+            <label>Nombre de usuario:</label>
+            <input type="text" placeholder="Usuario" required>
+            <label>Password:</label>
+            <input type="password" placeholder="Password" required>
+            <label>Fecha de registro:</label>
+            <input type="date">
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos para facturar</legend>
+            <label>País:</label>
+            <select>
+                <option>México</option>
+                <option>Canadá</option>
+                <option>Brasil</option>
+                <option>Argentina</option>
+                <option>Colombia</option>
+                <option>EUA</option>
+                <option>España</option>
+                <option>Ecuador</option>
+                <option>Francia</option>
+                <option>Alemania</option>
+                <option>Austria</option>
+            </select><br>
+
+            <label>Ciudad:</label>
+            <select>
+                <option>Aguascalientes</option>
+                <option>Baja California</option>
+                <option>Baja California Sur</option>
+                <option>Campeche</option>
+                <option>Chihuahua</option>
+                <option>Ciudad de México</option>
+                <option>Culiacán</option>
+                <option>Cuernavaca</option>
+                <option>Durango</option>
+                <option>Guadalajara</option>
+                <option>Hermosillo</option>
+                <option>La Paz</option>
+                <option>Mexicali</option>
+                <option>Mérida</option>
+                <option>Morelia</option>
+                <option>Pachuca</option>
+                <option>Puebla</option>
+                <option>Querétaro</option>
+                <option>San Luis Potosí</option>
+                <option>Saltillo</option>
+                <option>Sinaloa</option>
+                <option>Tepic</option>
+                <option>Tlaxcala</option>
+                <option>Tuxtla Gutiérrez</option>
+                <option>Villahermosa</option>
+                <option>Xalapa</option>
+                <option>Zacatecas</option>
+                <option>Toluca</option>
+                <option>Chilpancingo</option>
+                <option>Monterrey</option>
+                <option>Oaxaca</option>
+                <option>Guanajuato</option>
+            </select><br>
+
+            <label>Número de casa:</label>
+            <input type="number" placeholder="Número exterior">
+            <label>Colonia:</label>
+            <input type="text" placeholder="Colonia">
+            <label>Calle:</label>
+            <input type="text" placeholder="Calle"><br>
+
+            <label>RFC:</label>
+            <input type="text" placeholder="R.F.C" required>
+            <label>C.P:</label>
+            <input type="text" placeholder="Código postal">
+            <label>E-mail:</label>
+            <input type="email" placeholder="E-mail" required>
+        </fieldset>
+
+        <div class="botones">
+            <input type="checkbox"> Acepto términos y condiciones<br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Restablecer</button>
+        </div>
+    </div>
+    
+    <p style="text-align: right;">Marzo 2025, SLP.</p>
+</body>
+</html>
