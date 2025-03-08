@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>   
+<head>   
+<meta charset="utf-8" /> 
+<title>Compras Online</title>
+<style>
+    body {
+        background-color: lightgray;
+        font-family: Arial, Verdana, sans-serif;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        background-color: gray;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+    div {
+        width: 100%;
+        max-width: 500px;
+        background-color: #1a97be;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    fieldset {
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"], input[type="reset"] {
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: lightgray;
+    }
+    label {
+        font-weight: bold;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+    }
+</style>
+</head>
+<body> 
+    <h1>Compras online</h1>
+    <div>
+        <form method="post" action="" enctype="text/plain">
+            <fieldset>
+                <legend>Información del Cliente</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" placeholder="Nombre" name="nombre" id="nombre" required>
+                <label for="ap">Apellido paterno:</label>
+                <input type="text" placeholder="Apellido paterno" name="ap" id="ap" required>
+                <label for="am">Apellido materno:</label>
+                <input type="text" placeholder="Apellido materno" name="am" id="am" required>
+                <label for="user">Nombre de usuario:</label>
+                <input type="text" placeholder="Usuario" name="user" id="user" required>
+                <label for="pass">Contraseña:</label>
+                <input type="password" placeholder="Password" name="pass" id="pass" required>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de facturación</legend>
+                <label for="calle">Calle:</label>
+                <input type="text" placeholder="Calle" name="calle" id="calle" required>
+                <label for="numero">Num:</label>
+                <input type="text" placeholder="Num. Exterior" name="numero" id="numero" required>
+                <label for="col">Colonia:</label>
+                <input type="text" placeholder="Colonia" name="col" id="col" required>
+                <label for="correo">E-mail:</label>
+                <input type="email" placeholder="E-mail" name="correo" id="correo" required>
+                <label for="cp">Código Postal:</label>
+                <input type="number" placeholder="C.P." name="cp" id="cp" required>
+                <label for="web">Sitio web:</label>
+                <input type="url" placeholder="Sitio web" name="web" id="web">
+            </fieldset>
+            <fieldset>
+                <legend>Datos del artículo adquirido</legend>
+                <label for="tipo">Tipo:</label>
+                <select name="tipo" id="tipo" required>
+                    <option>Vestido</option>
+                    <option>Pantalón</option>
+                    <option>Playera</option>
+                    <option>Camisa</option>
+                    <option>Chamarra</option>
+                </select>
+                <label for="talla">Talla:</label>
+                <input type="checkbox" name="talla" value="Chico">Chico
+                <input type="checkbox" name="talla" value="Mediano">Mediano
+                <input type="checkbox" name="talla" value="Grande">Grande
+                <label for="colores">Selecciona el Color:</label>
+                <input type="color" name="colores" id="colores">
+                <label for="comentarios">Sugerencias:</label>
+                <textarea name="comentarios" id="comentarios"></textarea>
+            </fieldset>
+            <input type="submit" value="Enviar datos">
+            <input type="reset" value="Borrar datos">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; Distribuidor autorizado de productos de calidad.</p>
+    </footer>
+</body>
+</html>
