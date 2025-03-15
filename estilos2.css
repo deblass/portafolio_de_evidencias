@@ -1,0 +1,24 @@
+ul{
+    list-style-type: none ;
+    margin:0;
+    padding:0;
+    width: 20%;
+}
+li a{
+    display: block;
+    background-color: lightpink;
+    padding: 8px 10x ;
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    background-color: lightpink;
+    color: white;
+
+/*ID para dar referencia*/
+}
+
+li a.activo{
+    background-color: purple ;
+
+}
