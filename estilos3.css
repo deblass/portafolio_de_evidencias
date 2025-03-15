@@ -1,0 +1,54 @@
+.capa1{
+    margin-left: 25%;
+    padding: 12px;
+    height: 1000px;
+}
+ul{
+    list-style-type: none ;
+    margin:0;
+    padding:0;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background-color: lightpink;
+    overflow: auto;
+}
+li a{
+    display: block;
+    background-color: lightpink;
+    padding: 8px 10px ;
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    background-color: lightpink;
+    color: white;
+
+/*ID para dar referencia*/
+}
+
+li a.activo{
+    background-color: purple ;
+
+}
+h1{
+        font-family: "Emblema One", system-ui;
+        font-weight: 400;
+        font-style: normal;   
+}
+h2{
+    font-family: "Emblema One", system-ui;
+
+}
+p{
+    text-align:justify
+}
+@font-face{
+    font-family:"parrafos" ;
+    src: url("Raleway/Raleway-ExtraBold.ttf") 
+    format("truetype") ; 
+}
+p{
+    font-family: ´parrafos´;
+    text-align: justify;
+}
