@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Ayuda</title>
+    <link rel="stylesheet" href="estiloProyecto.css">
+</head>
+<body>
+    <header>
+        <h1>Foro de Ayuda - Ciberseguridad</h1>
+    </header>
+
+    <main>
+        <section class="nuevo-tema">
+            <h2>Publicar un nuevo tema</h2>
+            <form action="procesarForo.php" method="post">
+                <label for="usuario">Nombre:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="titulo">Título del tema:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <section class="temas">
+            <h2>Temas Recientes</h2>
+            <article>
+                <h3>¿Cómo proteger mis redes Wi-Fi?</h3>
+                <p><strong>Usuario:</strong> Ana</p>
+                <p>Hola, ¿cuáles son las mejores prácticas para mejorar la seguridad de mi red Wi-Fi en casa?</p>
+                <button>Responder</button>
+            </article>
+
+            <article>
+                <h3>Mejor software antivirus en 2025</h3>
+                <p><strong>Usuario:</strong> Luis</p>
+                <p>¿Alguien recomienda un buen antivirus gratuito que funcione bien este año?</p>
+                <button>Responder</button>
+            </article>
+
+            <article>
+                <h3>Evitar el phishing en correos electrónicos</h3>
+                <p><strong>Usuario:</strong> Sofía</p>
+                <p>¿Cómo puedo identificar un intento de phishing en mi bandeja de entrada?</p>
+                <button>Responder</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Foro de Ciberseguridad. Todos los derechos reservados.</p>
+        <p><a href="index.html">Volver a inicio</a></p>
+    </footer>
+</body>
+</html>
