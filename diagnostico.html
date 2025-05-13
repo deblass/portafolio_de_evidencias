@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diagnóstico de Ciberseguridad</title>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jsPDF -->
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+    <link rel="stylesheet" href="diagnostico.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Diagnóstico de Ciberseguridad 🔒</h1>
+        <form id="diagnosticoForm">
+            <div class="pregunta">
+                <p>1. ¿Qué significa el acrónimo **HTTPS**?</p>
+                <input type="radio" name="pregunta1" value="Protocolo seguro de transferencia de hipertexto"> Protocolo seguro de transferencia de hipertexto<br>
+                <input type="radio" name="pregunta1" value="Protocolo de acceso privado a la red"> Protocolo de acceso privado a la red<br>
+                <input type="radio" name="pregunta1" value="Herramienta de escaneo de malware"> Herramienta de escaneo de malware<br>
+            </div>
+
+            <div class="pregunta">
+                <p>2. ¿Cuál es una **buena práctica** de seguridad en contraseñas?</p>
+                <input type="radio" name="pregunta2" value="Usar la misma contraseña en todos los servicios"> Usar la misma contraseña en todos los servicios<br>
+                <input type="radio" name="pregunta2" value="Usar combinaciones de letras, números y símbolos"> Usar combinaciones de letras, números y símbolos<br>
+                <input type="radio" name="pregunta2" value="Escribirla en un papel junto al computador"> Escribirla en un papel junto al computador<br>
+            </div>
+
+            <!-- NUEVAS PREGUNTAS -->
+            <div class="pregunta">
+                <p>3. ¿Qué es el **phishing**?</p>
+                <input type="radio" name="pregunta3" value="Un tipo de ataque para robar información personal"> Un tipo de ataque para robar información personal<br>
+                <input type="radio" name="pregunta3" value="Un método de autenticación segura"> Un método de autenticación segura<br>
+                <input type="radio" name="pregunta3" value="Un software antivirus"> Un software antivirus<br>
+            </div>
+
+            <div class="pregunta">
+                <p>4. ¿Qué herramienta se usa comúnmente para **cifrar información**?</p>
+                <input type="radio" name="pregunta4" value="VPN"> VPN<br>
+                <input type="radio" name="pregunta4" value="Firewall"> Firewall<br>
+                <input type="radio" name="pregunta4" value="AES"> AES<br>
+            </div>
+
+            <div class="pregunta">
+                <p>5. ¿Qué significa **2FA** en ciberseguridad?</p>
+                <input type="radio" name="pregunta5" value="Autenticación en dos factores"> Autenticación en dos factores<br>
+                <input type="radio" name="pregunta5" value="Sistema avanzado de firewall"> Sistema avanzado de firewall<br>
+                <input type="radio" name="pregunta5" value="Un tipo de malware"> Un tipo de malware<br>
+            </div>
+
+            <div class="pregunta">
+                <p>6. ¿Cuál de las siguientes **NO** es una buena práctica de seguridad?</p>
+                <input type="radio" name="pregunta6" value="Actualizar el software regularmente"> Actualizar el software regularmente<br>
+                <input type="radio" name="pregunta6" value="Abrir correos desconocidos con enlaces sospechosos"> Abrir correos desconocidos con enlaces sospechosos<br>
+                <input type="radio" name="pregunta6" value="Usar autenticación de dos factores (2FA)"> Usar autenticación de dos factores (2FA)<br>
+            </div>
+
+            <div class="pregunta">
+                <p>7. ¿Cómo puedes protegerte contra **malware**?</p>
+                <input type="radio" name="pregunta7" value="Evitar descargas de fuentes desconocidas"> Evitar descargas de fuentes desconocidas<br>
+                <input type="radio" name="pregunta7" value="Desactivar el firewall"> Desactivar el firewall<br>
+                <input type="radio" name="pregunta7" value="Compartir contraseñas con amigos"> Compartir contraseñas con amigos<br>
+            </div>
+
+            <button type="button" onclick="evaluarRespuestas()">Evaluar</button>
+        </form>
+
+        <div id="resultado"></div>
+
+        <canvas id="graficoResultados"></canvas>
+        
+        <button id="descargarPDF">Descargar PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
