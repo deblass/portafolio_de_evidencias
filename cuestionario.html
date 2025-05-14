@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué tan segura es mi empresa?</title>
+    <link rel="stylesheet" href="estiloCuestionario.css">
+</head>
+<body>
+    <header>
+        <h1>¿Qué tan segura es mi empresa?</h1>
+    </header>
+
+    <main>
+        <form id="formulario">
+            <div class="pregunta">
+                <label>1️⃣ ¿Tu empresa cuenta con políticas de seguridad definidas?</label>
+                <select name="p1">
+                    <option value="10">Sí, están documentadas y aplicadas</option>
+                    <option value="5">Sí, pero no se aplican correctamente</option>
+                    <option value="0">No tenemos políticas de seguridad</option>
+                </select>
+            </div>
+            <div class="pregunta">
+                <label>2️⃣ ¿Los empleados reciben capacitación en ciberseguridad?</label>
+                <select name="p2">
+                    <option value="10">Sí, capacitación periódica</option>
+                    <option value="5">Sí, pero solo básica</option>
+                    <option value="0">No se capacita a los empleados</option>
+                </select>
+            </div>
+        
+            <div class="pregunta">
+                <label>3️⃣ ¿Utilizan autenticación multifactor en accesos sensibles?</label>
+                <select name="p3">
+                    <option value="10">Sí, en todos los sistemas críticos</option>
+                    <option value="5">Solo en algunos sistemas</option>
+                    <option value="0">No usamos autenticación multifactor</option>
+                </select>
+            </div>
+        
+            <div class="pregunta">
+                <label>4️⃣ ¿Tienen un plan de respuesta ante incidentes cibernéticos?</label>
+                <select name="p4">
+                    <option value="10">Sí, con protocolos claros</option>
+                    <option value="5">Sí, pero falta organización</option>
+                    <option value="0">No tenemos un plan definido</option>
+                </select>
+            </div>
+        
+            <div class="pregunta">
+                <label>5️⃣ ¿Realizan copias de seguridad periódicas?</label>
+                <select name="p5">
+                    <option value="10">Sí, diariamente</option>
+                    <option value="5">Sí, pero no con frecuencia</option>
+                    <option value="0">No realizamos copias de seguridad</option>
+                </select>
+            </div>
+        
+            <div class="pregunta">
+                <label>6️⃣ ¿Cuentan con un sistema de detección de intrusos?</label>
+                <select name="p6">
+                    <option value="10">Sí, en toda la red empresarial</option>
+                    <option value="5">Solo en áreas clave</option>
+                    <option value="0">No tenemos un sistema de detección</option>
+                </select>
+            </div>
+        
+            <div class="pregunta">
+                <label>7️⃣ ¿Los empleados utilizan contraseñas seguras?</label>
+                <select name="p7">
+                    <option value="10">Sí, con políticas de complejidad</option>
+                    <option value="5">Sí, pero sin reglas estrictas</option>
+                    <option value="0">No hay control sobre las contraseñas</option>
+                </select>
+            </div>
+        
+            <div class="pregunta">
+                <label>8️⃣ ¿Existe monitoreo de actividad sospechosa en la red?</label>
+                <select name="p8">
+                    <option value="10">Sí, con herramientas avanzadas</option>
+                    <option value="5">Solo en casos específicos</option>
+                    <option value="0">No monitoreamos nuestra red</option>
+                </select>
+            </div>
+        
+            <div class="pregunta">
+                <label>9️⃣ ¿Tienen protección contra ataques de phishing?</label>
+                <select name="p9">
+                    <option value="10">Sí, con filtros y capacitación</option>
+                    <option value="5">Solo con protección básica</option>
+                    <option value="0">No contamos con medidas contra phishing</option>
+                </select>
+            </div>
+        
+            <div class="pregunta">
+                <label>🔟 ¿El acceso a datos sensibles está restringido?</label>
+                <select name="p10">
+                    <option value="10">Sí, con niveles de acceso bien definidos</option>
+                    <option value="5">Sí, pero con algunas vulnerabilidades</option>
+                    <option value="0">No restringimos el acceso a datos</option>
+                </select>
+            </div>
+
+            <button type="button" id="evaluarBtn">Evaluar Seguridad</button>
+            <button type="button" id="pdfBtn">Generar Comprobante PDF</button>
+
+            <iframe id="visorPDF" style="width: 100%; height: 500px; border: none;"></iframe>
+        
+            <button type="button" id="descargarBtn">Descargar PDF</button>
+
+        </form>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="cuestionario.js"></script>
+</body>
+</html>

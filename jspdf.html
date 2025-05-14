@@ -1,0 +1,72 @@
+<!doctype>
+<html>
+<head>
+	<title>jsPDF</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+</head>
+
+<body>
+<iframe frameborder="0" width="500" height="400"></iframe>
+<script>
+$(document).ready(function() {$(document).ready(function () {
+    // ✅ Evaluar seguridad del cuestionario
+    $("#evaluarBtn").click(function () {
+        let total = 0;
+        let respuestasDetalle = ""; // Capturar detalles de respuestas
+
+        $("select").each(function () {
+            let preguntaTexto = $(this).prev("label").text();
+            let respuestaTexto = $(this).find("option:selected").text();
+            respuestasDetalle += preguntaTexto + " - " + respuestaTexto + "\n";
+            total += parseInt($(this).val());
+        });
+
+        let mensaje = "";
+        if (total >= 80) {
+            mensaje = "✅ ¡Tu empresa tiene una seguridad excelente!";
+        } else if (total >= 50) {
+            mensaje = "⚠️ Tu empresa tiene buena seguridad, pero aún necesita mejoras.";
+        } else {
+            mensaje = "🚨 Tu empresa está en riesgo. Debes implementar mejores medidas de seguridad.";
+        }
+
+        $("#resultado").html(mensaje);
+        $("#respuestasUsuario").val(respuestasDetalle); // Guardar respuestas para el PDF
+    });
+
+    // ✅ Generar comprobante en PDF con todas las respuestas del usuario
+    $("#pdfBtn").click(function () {
+        let resultado = $("#resultado").html();
+        let respuestas = $("#respuestasUsuario").val(); // Obtener las respuestas guardadas
+
+        if (resultado === "") {
+            alert("⚠️ Evalúa la seguridad antes de generar el PDF.");
+            return;
+        }
+
+        let doc = new jsPDF();
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(16);
+        doc.text("Comprobante de Evaluación de Seguridad", 10, 20);
+        doc.setFontSize(12);
+        doc.text("Resultado:", 10, 40);
+        doc.text(resultado, 10, 50);
+        doc.text("Fecha: " + new Date().toLocaleDateString(), 10, 70);
+        doc.text("Respuestas del cuestionario:", 10, 90);
+        doc.text(respuestas, 10, 100); // Agregar respuestas al PDF
+
+        doc.save("Comprobante_Seguridad.pdf");
+    });
+});

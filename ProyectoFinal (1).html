@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrisBlass Cyber</title>
+    <link rel="stylesheet"  type="text/css" href="estiloProyecto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+            <div class="titulo">
+                <h1>KRISSBLASS CYBER</h1>
+                <h2>El mapa hacia tu ciberseguridad empresarial</h2>
+            </div>
+        </header>
+        
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="proteccionDatos.html">Protección de Datos y Sistemas</a></li>
+            <li><a href="ciberamenaza.html">Ciberamenazas y Vulnerabilidades</a></li>
+            <li><a href="nube.html">Ciberseguridad en la Nube</a></li>
+            <li><a href="tecnologias.html">Tecnologías de la Ciberseguridad</a></li><br>
+            <li><a href="estrategias.html">Estrategias Empresariales de Ciberseguridad</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="lado izquierdo" id="proteccion">
+            <h2>Protección de Datos y Sistemas</h2>
+            <div class="contenido">
+                <img src="proteccion.jpg" alt="Protección" class="imagen">
+                <div class="info">
+                    La protección de datos en ciberseguridad busca evitar accesos no autorizados, ataques y pérdidas de información, 
+                garantizando su confidencialidad, integridad y disponibilidad.
+                </div>
+            </div>
+        </section>
+    
+        <section class="lado derecho" id="ciberamenazas">
+            <h2>Ciberamenazas y Vulnerabilidades</h2>
+            <div class="contenido">
+                <img src="ciberAmenaza.jpg" alt="Amenazas" class="imagen">
+                <div class="info">
+                    Las ciberamenazas son cualquier tipo de ataque dirigido a comprometer la seguridad de los sistemas, redes o datos. Estas pueden ser malware, ransomware, phishing, o ataques de denegación de servicio (DDoS).
+                </div>
+            </div>
+        </section>
+    
+        <section class="lado izquierdo" id="nube">
+            <h2>Ciberseguridad en la Nube</h2>
+            <div class="contenido">
+                <img src="nube.jpg" alt="Nube" class="imagen">
+                <div class="info">
+                    La ciberseguridad en la nube se refiere a las prácticas y tecnologías que protegen los datos, aplicaciones y servicios almacenados en entornos de nube. Dado que la información se almacena en servidores remotos,
+                 la seguridad en la nube se centra en la protección contra accesos no autorizados, pérdida de datos y ataques. 
+                </div>
+            </div>
+        </section>
+    
+        <section class="lado derecho" id="tecnologias">
+            <h2>Tecnologías de la Ciberseguridad</h2>
+            <div class="contenido">
+                <img src="tecnologias.jpg" alt="Tecnologías" class="imagen">
+                <div class="info">
+                    Las tecnologías de ciberseguridad son herramientas esenciales para proteger sistemas, redes y datos frente a las crecientes amenazas cibernéticas. Entre las más utilizadas se encuentran los firewalls, que filtran el tráfico de red, bloqueando accesos no autorizados mientras permiten las comunicaciones legítimas.
+                </div>
+            </div>
+        </section>
+
+        <section class="lado izquierdo" id="estrategias">
+            <h2>Estrategias Empresariales de Ciberseguridad</h2>
+            <div class="contenido">
+                <img src="estrategias.jpg" alt="Tecnologías" class="imagen">
+                <div class="info">
+                    Las estrategias empresariales de ciberseguridad son fundamentales para proteger los activos digitales y la información sensible de una organización frente a las amenazas cibernéticas. Estas estrategias deben ser proactivas, integrando prácticas y políticas de seguridad en todos los niveles de la empresa.
+                </div>
+            </div>
+        </section>
+    
+        <section id="video">
+            <h2>Video sobre Ciberseguridad</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dmrlfWp9bBc?si=RVNbUZgJdTcXoVDn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+            <div class="botones">
+            <a href="foro_ayuda.html" class="boton">Foro de ayuda</a>
+            <a href="preguntasfrecuentes.html" class="boton">Preguntas frecuentes</a>
+        </div>
+
+        <section class="cuestionario">
+            <h2>Evalúa la Ciberseguridad de tu Empresa</h2>
+            <a href="cuestionario.html" class="boton-grande">Acceder al Cuestionario</a>
+        </section>
+        
+        
+    </main>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="cuestionario.js"></script>
+
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');
+            s.type = "module"
+            s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2933910-HANGBBHZYAGZ460T/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+        
+
+    </body>
+    </html>
+
+    
+    
+    <footer>
+        <p>&copy; 2025 Cibersecurity Solutions. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-image: url(fondoIndex.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #3c89d1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Ajuste del encabezado */
+header {
+    background-color: rgba(0, 31, 63, 0.95);
+    padding: 80px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 4px 4px 10px rgba(0, 255, 204, 0.8);
+}
+
+/* Mejora del contenedor principal */
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(0, 255, 204, 0.15);
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+/* Ajuste del espacio entre secciones */
+.faq {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de preguntas frecuentes */
+.faq-container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: rgba(0, 255, 204, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+}
+
+/* Espaciado entre preguntas */
+details {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(0, 31, 63, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.8);
+    cursor: pointer;
+}
+
+/* Mejora de visualización del resumen */
+summary {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ffcc;
+    transition: color 0.3s ease;
+}
+
+summary:hover {
+    color: #ffcc00;
+}
+
+/* Espaciado interno de las respuestas */
+details p {
+    font-size: 18px;
+    color: white;
+    padding: 15px;
+    line-height: 1.6;
+}
+
+/* Ajuste del pie de página */
+footer {
+    background-color: rgba(0, 31, 63, 0.95);
+    padding: 25px;
+    color: white;
+    font-size: 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0, 255, 204, 0.7);
+    margin-top: 50px;
+}
+
+/* Mejor apariencia del enlace de regreso */
+footer a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.9);
+}
+.pregunta-personalizada {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(0, 31, 63, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0, 255, 204, 0.7);
+    text-align: center;
+}
+
+.pregunta-personalizada h2 {
+    color: #00ffcc;
+    font-size: 26px;
+    text-shadow: 2px 2px 6px rgba(255, 204, 0, 0.8);
+}
+
+.pregunta-personalizada p {
+    color: white;
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(0, 255, 204, 0.1);
+    color: white;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background-color: #00ffcc;
+    color: #001f3f;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+}
+
