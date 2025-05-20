@@ -1,0 +1,19 @@
+h1, h2 {
+    color: white;
+    background-color: purple;
+    text-align: center; 
+    font-size: 50px; 
+    padding: 20px;
+}
+
+form {
+    color: black;
+    font-size: 25px;
+    font-family: 'Times New Roman', serif; 
+    text-align: center; 
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 10px; 
+    width: 50%;
+    margin: auto;
+}

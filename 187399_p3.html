@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="examen_estilo.css">
+    <title>Calcula tu propina</title>
+</head>
+<body>
+    <h1>Calcula tu propina</h1>
+    <form id="propina-form">
+        <label for="pagar">Total a pagar:</label>
+        <input type="number" id="pagar" min="0" required><br>
+
+        <label for="porcentaje">Porcentaje a aplicar (%):</label>
+        <input type="number" id="porcentaje" min="0" required><br>
+
+        <button type="button" id="calculo">Calcular</button>
+    </form>
+
+    <h2>Propina calculada: <span id="propina">0</span></h2>
+    <h2>Total a pagar: <span id="total">0</span></h2>
+
+    <script>
+        document.getElementById("calculo").addEventListener("click", () => {
+            let pagar = parseFloat(document.getElementById("pagar").value);
+            let porcentaje = parseFloat(document.getElementById("porcentaje").value);
+
+            if (pagar > 0 && porcentaje >= 0) {
+                let propina = pagar * (porcentaje / 100);
+                document.getElementById("propina").textContent = propina.toFixed(2);
+                document.getElementById("total").textContent = (pagar + propina).toFixed(2);
+            } else {
+                alert("Por favor, ingresa valores válidos.");
+            }
+        });
+    </script>
+</body>
+</html>
